@@ -8,7 +8,6 @@ function App() {
   const getviews = async () => {
     const views = await axios.get('/api/views')
     console.log('views:', views)
-    // console.log()
     if (views.data) {
       setViews(views.data)
     } else {
@@ -21,7 +20,7 @@ function App() {
   }, [])
   return (
     <div className='App'>
-      <h1>Total page views are:{views}</h1>
+      <h1>Total page views saved in Redis:{views}</h1>
     </div>
   )
 }
